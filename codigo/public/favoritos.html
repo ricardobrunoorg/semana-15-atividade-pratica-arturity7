@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Favoritos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Esta página EXIGE login (REQUIRE_LOGIN não é definido como false),
+         então o login.js redireciona automaticamente para a tela de login
+         caso não exista um usuário logado. -->
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/favoritos.js" defer></script>
+  </head>
+  <body data-page="favoritos">
+    <header>
+      <div class="banner">
+        <img src="./assets/images/banner_ti.png" alt="" />
+      </div>
+      <div class="barra-info">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="favoritos.html">Meus Favoritos</a></li>
+            <li><a href="about.html">Sobre nós</a></li>
+          </ul>
+        </nav>
+        <div class="dados-usuario">
+          <span id="userInfo"></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h3>Meus Favoritos</h3>
+      <p>Aqui estão as receitas que você marcou como favoritas.</p>
+
+      <div id="listaCards" class="row">
+        <p>Carregando favoritos...</p>
+      </div>
+    </main>
+  </body>
+</html>

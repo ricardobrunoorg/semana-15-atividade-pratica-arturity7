@@ -1,3 +1,6 @@
+Aluno: Arthur Gabriel
+Matrícula: 924860
+
 # Código Fonte
 
 A pasta `codigo` serve para a manter o programa que vocês vão construir no contexto dessa disciplina. Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código do seu projeto.

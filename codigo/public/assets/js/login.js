@@ -21,6 +21,14 @@ var db_usuarios = {};
 // Objeto para o usuário corrente
 var usuarioCorrente = {};
 
+// Algumas páginas (ex: home) podem ser acessadas sem login, mostrando apenas
+// um link "Entrar". Para isso, basta declarar `var REQUIRE_LOGIN = false;`
+// em um <script> ANTES de incluir este arquivo login.js na página.
+// Por padrão (não declarado), a página exige login e redireciona automaticamente.
+if (typeof REQUIRE_LOGIN === 'undefined') {
+    var REQUIRE_LOGIN = true;
+}
+
 // Inicializa a aplicação de Login
 function initLoginApp () {
     let pagina = window.location.pathname;
@@ -33,7 +41,8 @@ function initLoginApp () {
         usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
         if (usuarioCorrenteJSON) {
             usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
-        } else {
+        } else if (REQUIRE_LOGIN) {
+            // Página exige login (ex: Meus Favoritos) e usuário não está logado
             window.location.href = LOGIN_URL;
         }
 
@@ -54,6 +63,14 @@ function initLoginApp () {
     }
 };
 
+
+// Função simples de mensagem, usada pelo módulo de login.
+// Uma página pode sobrescrever esta função (defina a sua ANTES de incluir login.js) para customizar a exibição.
+if (typeof displayMessage === 'undefined') {
+    var displayMessage = function (msg) {
+        alert(msg);
+    };
+}
 
 function carregarUsuarios(callback) {
     fetch(API_URL)
@@ -126,11 +143,26 @@ function addUser (nome, login, senha, email) {
         });
 }
 
+// Retorna true se existe um usuário logado (usuarioCorrente preenchido)
+function isUserLoggedIn () {
+    return !!(usuarioCorrente && usuarioCorrente.id);
+}
+
+// Atualiza a área de informações de login da página:
+// - Se não estiver logado, mostra o link "Entrar"
+// - Se estiver logado, mostra "Olá, <nome> | Sair"
 function showUserInfo (element) {
     var elemUser = document.getElementById(element);
-    if (elemUser) {
-        elemUser.innerHTML = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-                    <a onclick="logoutUser()">❌</a>`;
+    if (!elemUser) return;
+
+    if (isUserLoggedIn()) {
+        elemUser.innerHTML = `Olá, ${usuarioCorrente.nome} | <a href="#" id="linkSair">Sair</a>`;
+        document.getElementById('linkSair').addEventListener('click', function (e) {
+            e.preventDefault();
+            logoutUser();
+        });
+    } else {
+        elemUser.innerHTML = `<a href="${LOGIN_URL}">Entrar</a>`;
     }
 }
 

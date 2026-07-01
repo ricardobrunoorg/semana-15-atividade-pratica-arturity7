@@ -21,5 +21,87 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "receitas": [
+    {
+      "id": 1,
+      "nome": "Feijoada Completa",
+      "categoria": "Pratos principais",
+      "tempoPreparo": "3h 30min",
+      "dificuldade": "Difícil",
+      "imagem": "https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=600&h=400&fit=crop",
+      "descricao": "Clássico prato brasileiro à base de feijão preto, carnes suínas e acompanhamentos tradicionais.",
+      "ingredientes": ["Feijão preto", "Costelinha de porco", "Linguiça calabresa", "Bacon", "Louro", "Alho e cebola"]
+    },
+    {
+      "id": 2,
+      "nome": "Brigadeiro Gourmet",
+      "categoria": "Sobremesas",
+      "tempoPreparo": "25min",
+      "dificuldade": "Fácil",
+      "imagem": "https://images.unsplash.com/photo-1548907040-4baa419e6b96?w=600&h=400&fit=crop",
+      "descricao": "Docinho brasileiro cremoso de chocolate, perfeito para festas e sobremesas rápidas.",
+      "ingredientes": ["Leite condensado", "Chocolate em pó", "Manteiga", "Granulado"]
+    },
+    {
+      "id": 3,
+      "nome": "Moqueca de Peixe",
+      "categoria": "Pratos principais",
+      "tempoPreparo": "50min",
+      "dificuldade": "Médio",
+      "imagem": "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600&h=400&fit=crop",
+      "descricao": "Peixe cozido lentamente em leite de coco, azeite de dendê, pimentões e coentro.",
+      "ingredientes": ["Filé de peixe branco", "Leite de coco", "Azeite de dendê", "Pimentão", "Tomate", "Coentro"]
+    },
+    {
+      "id": 4,
+      "nome": "Salada Caprese",
+      "categoria": "Entradas",
+      "tempoPreparo": "10min",
+      "dificuldade": "Fácil",
+      "imagem": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&h=400&fit=crop",
+      "descricao": "Salada italiana leve com tomate, muçarela de búfala, manjericão fresco e azeite.",
+      "ingredientes": ["Tomate", "Muçarela de búfala", "Manjericão", "Azeite extra virgem", "Sal e pimenta"]
+    },
+    {
+      "id": 5,
+      "nome": "Lasanha à Bolonhesa",
+      "categoria": "Massas",
+      "tempoPreparo": "1h 20min",
+      "dificuldade": "Médio",
+      "imagem": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&h=400&fit=crop",
+      "descricao": "Camadas de massa, molho bolonhesa caseiro, molho branco e muito queijo gratinado.",
+      "ingredientes": ["Massa de lasanha", "Carne moída", "Molho de tomate", "Molho branco", "Queijo muçarela"]
+    },
+    {
+      "id": 6,
+      "nome": "Pão de Queijo",
+      "categoria": "Lanches",
+      "tempoPreparo": "40min",
+      "dificuldade": "Fácil",
+      "imagem": "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=600&h=400&fit=crop",
+      "descricao": "Bolinhas assadas de polvilho e queijo, crocantes por fora e macias por dentro.",
+      "ingredientes": ["Polvilho azedo", "Queijo minas curado", "Leite", "Óleo", "Ovos"]
+    },
+    {
+      "id": 7,
+      "nome": "Risoto de Cogumelos",
+      "categoria": "Pratos principais",
+      "tempoPreparo": "45min",
+      "dificuldade": "Médio",
+      "imagem": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&h=400&fit=crop",
+      "descricao": "Arroz arbóreo cremoso cozido lentamente com caldo de legumes e cogumelos salteados.",
+      "ingredientes": ["Arroz arbóreo", "Cogumelos frescos", "Caldo de legumes", "Vinho branco", "Queijo parmesão"]
+    },
+    {
+      "id": 8,
+      "nome": "Pudim de Leite Condensado",
+      "categoria": "Sobremesas",
+      "tempoPreparo": "1h 10min",
+      "dificuldade": "Fácil",
+      "imagem": "https://images.unsplash.com/photo-1615486511262-c7f9be3dbe5e?w=600&h=400&fit=crop",
+      "descricao": "Sobremesa clássica e cremosa, com calda de caramelo dourada e textura aveludada.",
+      "ingredientes": ["Leite condensado", "Leite", "Ovos", "Açúcar para calda"]
+    }
   ]
 }
